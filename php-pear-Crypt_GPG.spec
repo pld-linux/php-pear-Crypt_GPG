@@ -1,17 +1,17 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Crypt
 %define		_subclass	GPG
-%define		_status		beta
+%define		_status		stable
 %define		_pearname	Crypt_GPG
 Summary:	%{_pearname} - GNU Privacy Guard (GPG)
 Summary(pl.UTF-8):	%{_pearname} - Gnu Privacy Guard (GPG)
 Name:		php-pear-%{_pearname}
-Version:	0.7.1
+Version:	1.0.0
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	578ba3dd821de3ca1bf97b7f0152eed9
+# Source0-md5:	cf99330afed00943b4accd1168a9ac80
 URL:		http://pear.php.net/package/Crypt_GPG/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
