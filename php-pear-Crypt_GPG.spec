@@ -1,22 +1,21 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Crypt
-%define		_subclass	GPG
 %define		_status		stable
 %define		_pearname	Crypt_GPG
 Summary:	%{_pearname} - GNU Privacy Guard (GPG)
 Summary(pl.UTF-8):	%{_pearname} - Gnu Privacy Guard (GPG)
 Name:		php-pear-%{_pearname}
-Version:	1.1.1
+Version:	1.2.0
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	47c7afa196e2830609ae429de0ff77da
+# Source0-md5:	f26e3bd1dc4ad9562b29977a4b73542c
 URL:		http://pear.php.net/package/Crypt_GPG/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
+Obsoletes:	php-pear-Crypt_GPG-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,20 +38,6 @@ założeniu ma wspierać kryptografię klucza publicznego.
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 
@@ -73,7 +58,3 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Crypt/GPG
 %{php_pear_dir}/Crypt/GPG.php
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/Crypt_GPG
