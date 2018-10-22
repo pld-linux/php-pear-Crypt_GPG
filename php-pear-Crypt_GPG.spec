@@ -4,12 +4,12 @@
 Summary:	%{pearname} - GNU Privacy Guard (GPG)
 Summary(pl.UTF-8):	%{pearname} - Gnu Privacy Guard (GPG)
 Name:		php-pear-%{pearname}
-Version:	1.3.2
+Version:	1.4.0
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	8dea7ae503c282cedca591706bc2cc04
+# Source0-md5:	bddff46921d6f63d9166cfd213f6733e
 URL:		http://pear.php.net/package/Crypt_GPG/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -42,8 +42,6 @@ Ta klasa ma w PEAR status: %{status}.
 %prep
 %pear_package_setup
 
-mv .%{php_pear_dir}/data/Crypt_GPG/ChangeLog .
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
@@ -54,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc docs/Crypt_GPG/README.md
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Crypt/GPG
