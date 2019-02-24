@@ -4,12 +4,12 @@
 Summary:	%{pearname} - GNU Privacy Guard (GPG)
 Summary(pl.UTF-8):	%{pearname} - Gnu Privacy Guard (GPG)
 Name:		php-pear-%{pearname}
-Version:	1.4.0
+Version:	1.6.3
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	bddff46921d6f63d9166cfd213f6733e
+# Source0-md5:	824430837954be93c6c9b9def5691a64
 URL:		http://pear.php.net/package/Crypt_GPG/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
