@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	Crypt_GPG
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - GNU Privacy Guard (GPG)
 Summary(pl.UTF-8):	%{pearname} - Gnu Privacy Guard (GPG)
 Name:		php-pear-%{pearname}
