@@ -4,7 +4,7 @@ Summary:	%{pearname} - GNU Privacy Guard (GPG)
 Summary(pl.UTF-8):	%{pearname} - Gnu Privacy Guard (GPG)
 Name:		php-pear-%{pearname}
 Version:	1.6.3
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
